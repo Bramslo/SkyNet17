@@ -1,0 +1,21 @@
+entity Offres {
+	titre String,
+	description String,
+	responsabilites String,
+	competencesRequis String,
+	date Instant,
+	dateFin Instant,
+}
+
+entity Postul {
+	lettreMotivation String,
+}
+
+
+relationship OneToMany {
+	Offres to Postul
+}
+
+paginate Offres with pagination
+
+service all with serviceImpl except
